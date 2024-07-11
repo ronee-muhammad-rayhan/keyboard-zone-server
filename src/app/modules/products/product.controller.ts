@@ -5,6 +5,7 @@ import {
   createProductIntoDB,
   getAllProductsFromDB,
   getSingleProductFromDB,
+  updateAProductInDB,
 } from "./product.service";
 
 const createProduct = catchAsync(async (req, res) => {
@@ -41,4 +42,16 @@ const getSingleProductById = catchAsync(async (req, res) => {
   });
 });
 
-export { createProduct, getAllProducts, getSingleProductById };
+const updateAProduct = catchAsync(async (req, res) => {
+  const { id } = req.params;
+  const result = await updateAProductInDB(id, req.body);
+
+  sendResponse(res, {
+    success: true,
+    statusCode: httpStatus.OK,
+    message: "Product is updated successfully ",
+    data: result,
+  });
+});
+
+export { createProduct, getAllProducts, getSingleProductById, updateAProduct };
