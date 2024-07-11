@@ -1,0 +1,28 @@
+{
+  "name": "keyboard-zone-server",
+  "version": "1.0.0",
+  "description": "KeyboadZone is an e-commerce website backend application. It is being developed as a part of assignment-4 of Programming Hero's Level-2 Web development course.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronee-muhammad-rayhan/keyboard-zone-server.git"
+  },
+  "keywords": [
+    "Keyboard",
+    "Mechanical",
+    "Node",
+    "Express",
+    "MongoDb",
+    "Mongoose",
+    "TypeScript"
+  ],
+  "author": "RoneeMRayhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronee-muhammad-rayhan/keyboard-zone-server/issues"
+  },
+  "homepage": "https://github.com/ronee-muhammad-rayhan/keyboard-zone-server#readme"
+}
