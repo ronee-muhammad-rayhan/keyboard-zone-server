@@ -6,4 +6,5 @@ export type TProduct = {
   price: number;
   rating: number;
   description: string;
+  isDeleted?: boolean;
 };

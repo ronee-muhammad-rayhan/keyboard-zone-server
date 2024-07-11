@@ -12,8 +12,10 @@ const createProductValidationSchema = z.object({
     price: z.number().nonnegative("Price must be a non-negative number"),
     rating: z.number().min(0).max(5, "Rating must be between 0 and 5"),
     description: z.string().min(1, "Description is required"),
+    isDeleted: z.boolean().optional(),
   }),
 });
+
 const updateProductValidationSchema = z.object({
   body: z.object({
     image: z.string().url("Invalid URL format").optional(),

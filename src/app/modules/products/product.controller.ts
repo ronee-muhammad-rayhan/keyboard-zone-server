@@ -3,6 +3,7 @@ import catchAsync from "../../utils/catchAsync";
 import sendResponse from "../../utils/sendResponse";
 import {
   createProductIntoDB,
+  deleteAProductFromDB,
   getAllProductsFromDB,
   getSingleProductFromDB,
   updateAProductInDB,
@@ -54,4 +55,22 @@ const updateAProduct = catchAsync(async (req, res) => {
   });
 });
 
-export { createProduct, getAllProducts, getSingleProductById, updateAProduct };
+const deleteAProduct = catchAsync(async (req, res) => {
+  const { id } = req.params;
+  const result = await deleteAProductFromDB(id);
+
+  sendResponse(res, {
+    success: true,
+    statusCode: httpStatus.OK,
+    message: "Product is deleted successfully ",
+    data: result,
+  });
+});
+
+export {
+  createProduct,
+  getAllProducts,
+  getSingleProductById,
+  updateAProduct,
+  deleteAProduct,
+};

@@ -1,6 +1,7 @@
 import { Router } from "express";
 import {
   createProduct,
+  deleteAProduct,
   getAllProducts,
   getSingleProductById,
   updateAProduct,
@@ -26,5 +27,6 @@ productRoutes.patch(
   validateRequest(updateProductValidationSchema),
   updateAProduct
 );
+productRoutes.delete("/:id", deleteAProduct);
 
 export default productRoutes;
