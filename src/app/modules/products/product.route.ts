@@ -1,5 +1,9 @@
 import { Router } from "express";
-import { createProduct, getAllProducts } from "./product.controller";
+import {
+  createProduct,
+  getAllProducts,
+  getSingleProductById,
+} from "./product.controller";
 import validateRequest from "../../middlewares/validateRequests";
 import { createProductValidationSchema } from "./product.validation";
 
@@ -12,5 +16,6 @@ productRoutes.post(
 );
 
 productRoutes.get("/", getAllProducts);
+productRoutes.get("/:id", getSingleProductById);
 
 export default productRoutes;
