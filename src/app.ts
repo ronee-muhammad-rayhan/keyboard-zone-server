@@ -7,6 +7,6 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("sport zone");
+  res.send("keyboard zone");
 });
 export default app;
